@@ -29,11 +29,11 @@ public class TestRunner {
     public static void openbrowser()
     {
         // Write code here that turns the phrase above into concrete actions
-/*
+
         File file = new File("driver/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         driver = new ChromeDriver();
-*/
+
 
         // driver=new HtmlUnitDriver();
 
