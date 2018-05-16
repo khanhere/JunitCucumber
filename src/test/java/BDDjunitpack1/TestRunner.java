@@ -15,9 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
-
 import static BDDjunitpack1.pageobjects.SauceLabsLogin.driver;
-
 
 /*
 We will use this In case of simple junit classes without beforesuite and aftersuite annotations,
@@ -34,10 +32,7 @@ public class TestRunner {
         File file = new File("driver/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         driver = new ChromeDriver();
-
-
         // driver=new HtmlUnitDriver();
-
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
@@ -48,7 +43,6 @@ public class TestRunner {
         driver.quit();
 
     }
-
 
 }
 
