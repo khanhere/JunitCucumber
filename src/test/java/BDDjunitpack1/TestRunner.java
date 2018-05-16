@@ -2,6 +2,7 @@ package BDDjunitpack1;
 
 /*import com.github.mkolisnyk.cucumber.runner.AfterSuite;
 import com.github.mkolisnyk.cucumber.runner.BeforeSuite;*/
+import BDDjunitpack1.pageobjects.Reports_Generation;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
@@ -22,7 +23,7 @@ import static BDDjunitpack1.pageobjects.SauceLabsLogin.driver;
 We will use this In case of simple junit classes without beforesuite and aftersuite annotations,
         below ExtendedCucumber is used for beforesuite and aftersuite annotations */
 @RunWith(Cucumber.class)
-@CucumberOptions(format ={"pretty" , "html:src/test/target", "html:target/cucumber-html-report", "json:target/cucumber-json-report.json"})
+@CucumberOptions(format ={"pretty" , "html:target/cucumber-html-reports", "json:target/cucumber-json-report.json"})
 public class TestRunner {
 
     @BeforeClass
@@ -43,6 +44,7 @@ public class TestRunner {
 
     @AfterClass
     public static void tearDown(){
+        Reports_Generation.GenerateMasterthoughtReport();
         driver.quit();
 
     }

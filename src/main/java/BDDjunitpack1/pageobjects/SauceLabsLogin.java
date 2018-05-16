@@ -3,15 +3,15 @@ package BDDjunitpack1.pageobjects;
 import com.sun.webkit.WebPage;
 import org.openqa.selenium.By;
 //import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class SauceLabsLogin {
-   public static RemoteWebDriver driver=null;
+   public static WebDriver driver=null;
     private static WebElement element = null;
 
 
-    public static void SauceLabsLoginPageTitle(RemoteWebDriver driver)
+    public static void SauceLabsLoginPageTitle(WebDriver driver)
     {
 
         if(!driver.getTitle().equals("Sauce Labs | Login"))
@@ -30,17 +30,17 @@ else {
 
 
 
-    public static WebElement username_field(RemoteWebDriver driver){
+    public static WebElement username_field(WebDriver driver){
 element=driver.findElement(By.name("username"));
 return element;
     }
 
-    public static WebElement password_field(RemoteWebDriver driver){
+    public static WebElement password_field(WebDriver driver){
         element=driver.findElement(By.name("password"));
         return element;
     }
 
-    public static WebElement login_button(RemoteWebDriver driver){
+    public static WebElement login_button(WebDriver driver){
         element=driver.findElement(By.id("submit"));
         return element;
     }
